@@ -12,11 +12,11 @@
       </li>      
     </ul>
   </div>
-  <ul [ngClass]="{'disappear': isProjectOpen }" class="portfolio-gallery no-margin-padding" *ngIf="!isPortfolioOpen">
+  <ul [ngClass]="{'disappear': isProjectOpen }" class="portfolio-gallery no-margin-padding">
     <li *ngFor="let project of projects">
       <figure (mouseover)="project.animateClass = 'animate-project'" (mouseout)="project.animateClass = ''" (click)="toggleProject()">
         <!-- Photo by Rawpixel on Unsplash -->
-        <div [ngClass]="[project?.animateClass, project.imgClass]"></div>
+        <div [ngClass]="[project.animateClass, project.imgClass]"></div>
         <figcaption class="caption" [ngClass]="project.animateClass"><h3>Vast cosmic arena</h3></figcaption>
       </figure>
     </li>
