@@ -1,0 +1,120 @@
+.me-container > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+
+  li {
+    padding: 20px;
+    position: relative;
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 10px;
+  }
+
+  .hexagon {
+    width: 100px; 
+    height: 57.74px;
+    background-color: #eee;
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+  }
+  
+  .hexagon:before {
+    bottom: 100%;
+    border-bottom: 28.87px solid #eee;
+  }
+  
+  .hexagon:after {
+    top: 100%; 
+    width: 0;
+    border-top: 28.87px solid #eee;
+  }
+
+  .golf {
+    background: url('/assets/icons/golf.png');
+    height: 50px;
+    width: 50px;
+  }
+
+  .mtb {
+    background: url('/assets/icons/mtb.png');
+    height: 50px;
+    width: 50px;
+  }
+
+  .gaming {
+    background: url('/assets/icons/gaming.png');
+    height: 50px;
+    width: 50px;
+  }
+
+  .me-img {
+    height: 250px;
+    width: calc(100% + 32px);
+    margin: 0 -16px 16px -16px;
+
+    &.image-one {
+      background: url(https://images.unsplash.com/photo-1471421298428-1513ab720a8e);
+      background-size: cover;
+      background-position: center;
+    }
+  
+    &.mtb-img {
+      background: url(/assets/img/mtb.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    &.test-1-img {
+      background: url(/assets/img/test-1.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    &.test-2-img {
+      background: url(/assets/img/test-2.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    &.test-3-img {
+      background: url(/assets/img/test-3.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+
+  figure {
+    margin: 0;
+    padding: 0;
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%; 
+    }
+  }
+}
+
+mat-card {
+  //margin: 20px;
+  min-width: 250px;
+}

@@ -1,0 +1,135 @@
+/* Typography imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: 'Playfair Display', serif;
+// }
+
+h2 {
+  font-weight: 100;
+  font-size: 1.8em;
+}
+
+ul {
+  list-style: none;
+}
+
+// p, a {
+//   font-family: 'Source Sans Pro', sans-serif;
+// }
+
+/* Generic styles */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  background-color: goldenrod;
+  text-decoration: none;
+  color: white;
+  border-radius: .25rem;
+  text-align: center;
+  display: inline-block;
+  transition: all .3s;
+}
+
+a:hover {
+  opacity: .6;
+}
+
+/* Styles for the hero image */
+.hero {
+  /* Photo by mnm.all on Unsplash */
+  background: #37373A; //url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center;
+  background-size: cover;
+  /* grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  z-index: 99;
+  text-align: center;
+
+  .hero-title {
+    padding: 40px;
+    z-index: 99;
+  }
+}
+
+.hero > * {
+  color: white;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+
+
+.hero > article > p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.hero > article > a {
+  padding: 1rem;
+  margin-top: .75rem;
+}
+
+/* footer */
+footer {
+  background-color: #333;
+  padding: .75rem;
+  color: white;
+  text-align: center;
+  font-size: .75rem;
+}
+
+.image-one {
+  background: url(https://images.unsplash.com/photo-1471421298428-1513ab720a8e);
+  background-size: cover;
+  height: 400px;
+}
+
+.section-title {
+  padding: 20px;
+  text-align: center;
+  background: #505050;
+  color: white;
+}
+
+.secondary-bg {
+  background: #F5F5F5;
+  color: black;
+}
+
+
+// .skills {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+// }
+
+.main-bg {
+  position: absolute;
+  background: url(/assets/img/cropped-me-hero.png);
+  background-size: contain;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 49;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: 60%;
+}
+
+section {
+  z-index: 50;
+}
+
+.main-bg-container {
+  position: relative;
+}
+

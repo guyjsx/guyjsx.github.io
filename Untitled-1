@@ -1,0 +1,66 @@
+- example of leading team
+- arc project
+  - Auth
+  
+  Converted session based API to JWT to faciliate stateless auth and allow for a microapp archtiecture
+
+  - Gateway
+  
+  Using express gateway, we achieved a facade in front of our microappp APIs. 
+  The gateway handled rate limiting, auth verification, etc
+
+  - Prototype
+
+  The prototypes included Angular 8, NestJS (Node), .NET Core and LWC applications.
+  Purpose was to outline standards, define best practices and create common libraries. 
+  
+
+
+
+- ionic
+
+The platform lacked the ability to be served on mobile devices and use native features. 
+We converted the platform from AngularJS to Angular and wrapped it in Ionic 4. This allowed the ability to deploy 
+the app as a PWA to web, Android and IOS. Since our customers have the potential to lose connection while using the applications
+we added the capability to reliabily detect a customer dropping connection by using a service worker, and enhanced our offline support.
+We also designed a strategy for taking our platform alerts and hooking into native push notifications for Android and IOS.
+Our customers could now see updated alerts on their mobile devices. 
+
+- oauth2 and jwt
+- e2e testing
+
+We strive for 100% test coverage using Jest, but we wanted another regression testing suite that could 
+catch issues from the UI perspective. After analyzing the latest e2e testing tools such as Cypress, Testcafe and
+We decided that testcafe had the best support for the browsers we required. 
+
+- Angular, NestJS, GraphQl
+
+Maybe switcht to just graphql
+
+- guild Meetings
+
+Guild meeting are big part of teh Beyond culture. We come togetehr and discuss the latest in development, QA, etc
+I've been the beyond one guild meeting holder and helped facilitate cross team discussion.
+Our topics include anything from new trends, architecture demos, PR reviews or current platform issues and resolutions.
+
+
+- platform performance
+
+The first project at Beyond one was identifying platform performance issues. We found that applications were making serveral
+of the same requests when loading. There were also dependencies cross-applications that could be shared and loaded once
+AFter using webpack toolling, we discovered lodash was loaded multiple times.
+we transitioned lodash to a platform dependency that applications could use.
+We also added an in memory cachcing layer to decrease network requests. 
+
+- Verastem
+- Realtime BI
+- CRM
+- Genesys
+
+
+- Agile/Scrum -b1 & pharmacord
+
+- example leadership rjl
+- foundation grant
+- crm developement
+

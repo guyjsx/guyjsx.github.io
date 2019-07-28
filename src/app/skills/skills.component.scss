@@ -1,0 +1,33 @@
+.skills-container > ul {
+  margin: 0;
+  padding-bottom: 20px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 100px repeat(auto-fit, 100px);
+  grid-gap: 1rem;
+
+  .skill-icon {
+    width: auto;
+    height: 70px;
+  }
+
+  .skill-title {
+    text-align: center;
+    color: black;
+  }
+}
+
+@mixin icons($icons...) {
+  @each $icon in $icons {
+    .#{$icon} {
+      background: url('/assets/icons/' + #{$icon} + '.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+@include icons(
+  'amazon', 'angular', 'docker', 'js', 'mtb', 'mysql', 'nodejs'
+)

@@ -1,0 +1,24 @@
+<div class="breweries" id="breweries">
+  <div class="portfolio-content-container">
+    <mat-icon (click)="toggleProject()" aria-hidden="false" aria-label="arrow-back">arrow_back</mat-icon>
+    <ul class="portfolio-content">
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis mi vel ligula volutpat lobortis. Etiam placerat magna et risus volutpat dictum. In nec fermentum velit, nec luctus nisl. Nam rutrum pellentesque leo. Proin nec mi tellus. Morbi id est nibh. Sed libero sem, vehicula in sapien sed, auctor tristique odio. Curabitur vel neque at nulla tristique rhoncus. Aliquam semper leo vel augue condimentum sodales. Sed sit amet dui rhoncus, ornare dui eu, pretium nunc. Pellentesque at fermentum orci. Suspendisse in placerat nibh. Aliquam eleifend purus vitae eros porttitor, eget auctor nisi lobortis. Vivamus finibus eleifend ex, sed egestas risus elementum vitae. Maecenas aliquet erat neque, eget placerat lacus bibendum ac. Morbi facilisis pellentesque bibendum.
+
+          Pellentesque imperdiet massa sed justo varius, id tincidunt erat posuere. Proin sagittis purus ac accumsan facilisis. Curabitur condimentum maximus risus ut viverra. Donec cursus magna imperdiet molestie consequat. Integer pulvinar nulla vitae ipsum feugiat aliquet. Aenean sit amet risus mattis, imperdiet ligula ac, cursus justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin porttitor lorem dolor, sed volutpat nunc tincidunt iaculis. Donec venenatis luctus lacinia.
+          
+          Vivamus ac elit eget eros vulputate auctor. Sed facilisis consequat augue non imperdiet. Fusce vel maximus nisi, quis pharetra nunc. Praesent pharetra, nibh vitae ornare tristique, purus diam iaculis enim, consequat ultricies justo urna quis mi. Maecenas auctor ligula blandit odio pharetra volutpat. Sed eu urna ac ipsum sodales tempus. Nam vel mi nisi. Fusce pellentesque tincidunt hendrerit. Donec pretium sollicitudin dui rutrum egestas. Sed volutpat massa non est commodo posuere. Morbi bibendum lobortis est, eu laoreet magna lacinia molestie. Praesent laoreet turpis id magna tincidunt, vel aliquam ligula pulvinar. Fusce ut sagittis nibh. Cras sit amet volutpat mauris. Etiam orci lorem, eleifend in tellus sit amet, mollis commodo elit. Mauris placerat ligula ante, a sagittis mauris vulputate eu.
+          
+          Mauris vulputate sed est in vestibulum. Aliquam erat volutpat. Proin quis faucibus magna, rhoncus gravida mi. Sed ligula felis, convallis eget tincidunt a, interdum porttitor orci. Sed egestas a est eget maximus. Praesent porttitor fermentum eleifend. Curabitur hendrerit posuere dictum. Nulla blandit lorem commodo est sagittis, sed ornare dolor finibus. Ut a lectus nisl. Sed vestibulum urna ac aliquet consequat. Sed suscipit mi diam, at mollis orci bibendum nec. Quisque non magna vel nisi consectetur rutrum. Maecenas dignissim odio sit amet ipsum auctor, sed gravida odio pellentesque.
+      </li>      
+    </ul>
+  </div>
+  <ul [ngClass]="{'disappear': isProjectOpen }" class="portfolio-gallery no-margin-padding" *ngIf="!isPortfolioOpen">
+    <li *ngFor="let project of projects">
+      <figure (mouseover)="project.animateClass = 'animate-project'" (mouseout)="project.animateClass = ''" (click)="toggleProject()">
+        <!-- Photo by Rawpixel on Unsplash -->
+        <div [ngClass]="[project?.animateClass, project.imgClass]"></div>
+        <figcaption class="caption" [ngClass]="project.animateClass"><h3>Vast cosmic arena</h3></figcaption>
+      </figure>
+    </li>
+  </ul>
+</div>

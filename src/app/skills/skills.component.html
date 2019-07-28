@@ -1,0 +1,8 @@
+<div class="skills-container">
+  <ul *ngFor="let proficiency of proficiencies">
+    <li *ngFor="let skill of proficiency?.skills">
+      <div class="skill-icon" [ngClass]="skill?.icon"></div>
+      <div class="skill-title">{{ skill?.title }}</div>
+    </li>
+  </ul>
+</div>

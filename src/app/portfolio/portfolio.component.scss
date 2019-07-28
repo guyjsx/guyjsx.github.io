@@ -1,0 +1,115 @@
+/* breweries styles */
+
+.breweries > ul.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  //grid-gap: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  transition: all .8s ease-in-out;
+}
+
+.breweries > ul > li {
+  // border: 1px solid #E2E2E2;
+  // border-radius: .5rem;
+}
+
+.breweries > ul.portfolio-gallery > li > figure {
+  max-height: 250px;
+  overflow: hidden;
+  // border-top-left-radius: .5rem;
+  // border-top-right-radius: .5rem;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.breweries > ul.portfolio-gallery > li > figure > img {
+  width: 100%;
+}
+
+.breweries > ul.portfolio-gallery > li > figure > figcaption {
+  position: absolute;
+  bottom: -90px;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+
+  &.caption {
+    transition: all .3s ease-in-out;
+    &.animate-project {
+      bottom: 0;
+    }
+  }
+}
+
+.breweries > ul.portfolio-gallery > li > figure > figcaption > h3 {
+  color: white;
+  padding: .75rem;
+  font-size: 1.25rem;
+}
+
+.breweries > ul.portfolio-gallery > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: #666666;
+}
+
+.breweries > ul.portfolio-gallery > li > a {
+  padding: .5rem 1rem;
+  margin: .5rem;
+}
+
+.image-one, .image-two {
+  background: url(https://images.unsplash.com/photo-1471421298428-1513ab720a8e);
+  background-size: cover;
+  height: 270px;
+}
+
+.image-two {
+  background: url(/assets/img/bio.jpg);
+  background-size: cover;
+}
+
+@mixin imgs($imgs...) {
+  @each $img in $imgs {
+    .#{$img} {
+      background: url('/assets/img/' + #{$img} + '.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 270px;
+      transition: all .3s ease-in-out;
+
+      &.animate-project {
+        transform: translate(0px, -20px);
+      }
+    }
+  }
+}
+
+@include imgs(
+  'api', 'bio', 'phone', 'rjl', 'leader'
+);
+
+
+.no-margin-padding { 
+  margin: 0;
+  padding: 0;
+}
+
+.disappear {
+  // transform: translateX(100%);
+  opacity: 0;
+}
+
+.reappear {
+  opacity: 1;
+}
+
+.portfolio-content-container {
+  //transform: translate
+  position: absolute;
+  // left: 100%;
+}
