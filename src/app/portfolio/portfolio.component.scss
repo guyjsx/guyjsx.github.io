@@ -32,7 +32,7 @@
 
 .breweries > ul.portfolio-gallery > li > figure > figcaption {
   position: absolute;
-  bottom: -90px;
+  bottom: -115px;
   background-color: rgba(0,0,0,.7);
   width: 100%;
 
@@ -60,6 +60,10 @@
 .breweries > ul.portfolio-gallery > li > a {
   padding: .5rem 1rem;
   margin: .5rem;
+}
+
+.breweries {
+  position: relative;
 }
 
 .image-one, .image-two {
@@ -111,5 +115,27 @@
 .portfolio-content-container {
   //transform: translate
   position: absolute;
+  height: 100%;
   // left: 100%;
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .breweries > ul.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+mat-icon {
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+  font-size: 50px;
+  z-index: 1001;
+  cursor: pointer;
+  color: #aaa;
 }

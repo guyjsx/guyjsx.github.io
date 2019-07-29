@@ -24,8 +24,7 @@ export class SkillsComponent implements OnInit {
         { title: 'JavaScript', icon: 'js' },
         { title: 'Angular', icon: 'angular' },
         { title: 'NodeJS', icon: 'nodejs' },
-        { title: 'MySQL', icon: 'js' },
-        { title: 'JavaScript', icon: 'js' }
+        { title: 'MySQL', icon: 'js' }
       ]
     },
     // {
