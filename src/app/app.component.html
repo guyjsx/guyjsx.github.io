@@ -1,4 +1,19 @@
 <main class="wrapper">
+  <!-- <div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="scrollToElement(skills)">
+       
+        <span (click)="scrollToElement(skills)">Skills</span>
+      </button>
+      <button mat-menu-item (click)="scrollToElement(portfolio)">
+        test
+        <span>Portfolio</span>
+      </button>
+      </mat-menu>
+  </div> -->
   <section>
     <div class="main-bg"></div>
     <div class="hero">
@@ -9,7 +24,7 @@
       <div></div>
     </div>
   </section>
-  <section class="section-title-static secondary-bg">
+  <section #skills class="section-title-static secondary-bg">
     <h2>My Skills</h2>
   </section>
   <section>
@@ -17,7 +32,7 @@
       <app-skills></app-skills>
     </div>
   </section>
-  <section class="no-margin-padding">
+  <section #portfolio class="no-margin-padding">
     <div class="section-title">
       <h2>Portfolio</h2>
     </div>
@@ -26,13 +41,13 @@
   <!-- <section id="experience" class="section-title">
     
   </section> -->
-  <section class="no-margin-padding">
+  <section #experience class="no-margin-padding">
     <div class="section-title">
       <h2>Experience</h2>
     </div>
     <app-experience></app-experience>
   </section>
-  <section class="section-content secondary-bg">
+  <section #me class="section-content secondary-bg">
     <div class="section-title">
       <h2>About Me</h2>
     </div>

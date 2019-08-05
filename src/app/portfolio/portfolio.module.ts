@@ -5,7 +5,7 @@ import { PortfolioComponent } from './portfolio.component';
 import { PortfolioItemComponent } from './portfolio-item/portfolio-item.component';
 import { PortfolioDialogComponent } from './portfolio-dialog/portfolio-dialog.component';
 
-import { MatDialogModule } from '@angular/material';
+import { MatDialogModule, MatCardModule } from '@angular/material';
 
 @NgModule({
   declarations: [PortfolioComponent, PortfolioItemComponent, PortfolioDialogComponent],
@@ -15,7 +15,8 @@ import { MatDialogModule } from '@angular/material';
   imports: [
     CommonModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   entryComponents: [
     PortfolioDialogComponent

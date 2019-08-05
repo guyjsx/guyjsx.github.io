@@ -24,6 +24,7 @@
     "@angular/router": "~8.1.2",
     "animate.css": "^3.7.2",
     "rxjs": "~6.4.0",
+    "scrollreveal": "^4.0.5",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },

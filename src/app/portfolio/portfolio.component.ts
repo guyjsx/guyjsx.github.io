@@ -7,26 +7,17 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
   public innerWidth = 0;
+  public index = 0;
   public isProjectOpen = false;
   public projects = [
     {
-      title: 'PharmaCord',
+      title: 'Verastem Implemenation',
       imgClass: 'bio',
       animateClass: ''
     },
     {
-      title: 'Genesys',
+      title: 'Bio-Pharma CRM',
       imgClass: 'phone',
-      animateClass: ''
-    },
-    {
-      title: 'Micro-app / Micro-API',
-      imgClass: 'api',
-      animateClass: ''
-    },
-    {
-      title: 'Leadership',
-      imgClass: 'leader',
       animateClass: ''
     },
     {
@@ -35,7 +26,17 @@ export class PortfolioComponent implements OnInit {
       animateClass: ''
     },
     {
-      title: 'Micro-app / Micro-API',
+      title: 'Micro-App Re-Architecture',
+      imgClass: 'api',
+      animateClass: ''
+    },
+    {
+      title: 'UPS Supervisor / Full-Time Student',
+      imgClass: 'leader',
+      animateClass: ''
+    },
+    {
+      title: 'GraphQL',
       imgClass: 'api',
       animateClass: ''
     },
@@ -68,7 +69,8 @@ export class PortfolioComponent implements OnInit {
     event.target.className = event.target.className.replace('myClass', '');
   }
 
-  toggleProject() {
+  toggleProject(index) {
+    this.index = index;
     this.isProjectOpen = !this.isProjectOpen;
   }
 }

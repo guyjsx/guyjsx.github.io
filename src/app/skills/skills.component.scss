@@ -1,9 +1,9 @@
 .skills-container > ul {
   margin: 0;
-  padding-bottom: 20px;
+  padding: 20px 20px;
   list-style-type: none;
   display: grid;
-  grid-template-columns: 100px repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 1rem;
 
   .skill-icon {
@@ -14,6 +14,10 @@
   .skill-title {
     text-align: center;
     color: black;
+  }
+
+  .skill-content {
+    width: 100px;
   }
 }
 

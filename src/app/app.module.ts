@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { SkillsComponent } from './skills/skills.component';
 import { MeComponent } from './me/me.component';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatButtonModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
@@ -24,7 +25,9 @@ import { ExperienceComponent } from './experience/experience.component';
     PortfolioModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

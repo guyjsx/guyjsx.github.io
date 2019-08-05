@@ -22,4 +22,9 @@ export class AppComponent {
       console.log('The dialog was closed');
     });
   }
+
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  }
 }

@@ -1,0 +1,29 @@
+mat-icon {
+  position: sticky;
+  top: 15px;
+  padding: 20px;
+  font-size: 50px;
+  z-index: 1001;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.portfolio-content-container {
+  //transform: translate
+  position: absolute;
+  height: 100%;
+  // left: 100%;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+
+    p {
+      text-indent: 30px;
+      text-align: justify;
+    }
+  }
+}
