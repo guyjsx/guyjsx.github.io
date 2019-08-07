@@ -1,5 +1,5 @@
 <div class="breweries" id="breweries">
-  <app-portfolio-item *ngIf="isProjectOpen" [index]="index" (navigateBack)="toggleProject()"></app-portfolio-item>
+  <app-portfolio-item *ngIf="isProjectOpen" [index]="index" (navigateBack)="toggleProject(port)"></app-portfolio-item>
   <ul [ngClass]="{'disappear': isProjectOpen }" class="portfolio-gallery no-margin-padding">
     <li *ngFor="let project of projects; let i = index">
       <figure (mouseover)="project.animateClass = 'animate-project'" (mouseout)="project.animateClass = ''" (click)="toggleProject(i)">

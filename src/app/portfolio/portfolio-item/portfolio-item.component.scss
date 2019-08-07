@@ -19,11 +19,54 @@ mat-icon {
     margin: 0;
     padding: 0;
     display: grid;
+    height: calc(100% - 100px);
     grid-template-columns: 1fr 5fr 1fr;
+    overflow: scroll;
+
+    li {
+      height: calc(100% - 100px);
+    }
 
     p {
       text-indent: 30px;
       text-align: justify;
     }
   }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+blockquote{
+  font-size: 1em;
+  width: 80%;
+  margin: 20px auto;
+  font-family: Open Sans;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #448AFF;
+  line-height: 1.6;
+  position: relative;
+  background: #EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#448AFF;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
 }

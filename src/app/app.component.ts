@@ -1,13 +1,15 @@
 import { PortfolioDialogComponent } from './portfolio/portfolio-dialog/portfolio-dialog.component';
-import { MatDialog } from '@angular/material';
-import { Component } from '@angular/core';
+import { MatDialog, MatMenuTrigger } from '@angular/material';
+import { Component, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
+  @ViewChild(MatMenuTrigger, { static: false }) trigger: MatMenuTrigger;
   title = 'port';
 
   constructor(public dialog: MatDialog) {}
@@ -23,8 +25,8 @@ export class AppComponent {
     });
   }
 
-  scrollToElement($element): void {
-    console.log($element);
-    $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  scrollTo(element): void {
+    console.log(element);
+    element.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
 }

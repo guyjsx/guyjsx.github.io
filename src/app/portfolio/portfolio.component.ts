@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { element } from 'protractor';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,17 +7,28 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
+  @Input() portfolio: any;
   public innerWidth = 0;
   public index = 0;
   public isProjectOpen = false;
   public projects = [
     {
-      title: 'Verastem Implemenation',
-      imgClass: 'bio',
+      title: 'Micro-App Re-Architecture',
+      imgClass: 'micro-api',
+      animateClass: ''
+    },
+    {
+      title: 'Implementation Architect',
+      imgClass: 'pharma',
       animateClass: ''
     },
     {
       title: 'Bio-Pharma CRM',
+      imgClass: 'crm',
+      animateClass: ''
+    },
+    {
+      title: 'Genesys API',
       imgClass: 'phone',
       animateClass: ''
     },
@@ -26,28 +38,13 @@ export class PortfolioComponent implements OnInit {
       animateClass: ''
     },
     {
-      title: 'Micro-App Re-Architecture',
-      imgClass: 'api',
+      title: 'Promoting Healthy Conflict',
+      imgClass: 'trust',
       animateClass: ''
     },
     {
-      title: 'UPS Supervisor / Full-Time Student',
-      imgClass: 'leader',
-      animateClass: ''
-    },
-    {
-      title: 'GraphQL',
-      imgClass: 'api',
-      animateClass: ''
-    },
-    {
-      title: 'Leadership',
-      imgClass: 'leader',
-      animateClass: ''
-    },
-    {
-      title: 'Restorative Justice Louisville',
-      imgClass: 'rjl',
+      title: 'UPS: FT Night Shift & FT Student',
+      imgClass: 'ups',
       animateClass: ''
     }
   ];
@@ -72,5 +69,7 @@ export class PortfolioComponent implements OnInit {
   toggleProject(index) {
     this.index = index;
     this.isProjectOpen = !this.isProjectOpen;
+    console.log('port scroll');
+    this.portfolio.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
 }

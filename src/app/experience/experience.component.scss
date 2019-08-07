@@ -16,6 +16,10 @@
 //   }
 // }
 
+.container-fluid .row {
+    padding: 0 !important;
+}
+
 $primary-color: #FF6B6B;
 $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 
@@ -122,9 +126,9 @@ a {
         }
 
         &.right { 
-          span {
-            padding-left: 20px;
-          }
+        //   span {
+        //     padding-left: 20px;
+        //   }
         }
     }
     /*----- TIMELINE MARKER -----*/
