@@ -66,7 +66,7 @@ export class PortfolioComponent implements OnInit {
     event.target.className = event.target.className.replace('myClass', '');
   }
 
-  toggleProject(index) {
+  toggleProject(index = 0) {
     this.index = index;
     this.isProjectOpen = !this.isProjectOpen;
     console.log('port scroll');
