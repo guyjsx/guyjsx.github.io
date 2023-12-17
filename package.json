@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "gh": "ng build --prod --base-href https://guyjstitt.github.io; npx ngh --dir=dist/port --branch=master;"
+    "gh": "ng build --prod --base-href https://guyjsx.github.io; npx ngh --dir=dist/port --branch=master;"
   },
   "private": true,
   "dependencies": {
